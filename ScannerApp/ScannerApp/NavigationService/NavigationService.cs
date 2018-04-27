@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Text;
+using GalaSoft.MvvmLight.Views;
 using Xamarin.Forms;
 
 namespace ScannerApp.NavigationService
 {
-    public class NavigationService
+    public class NavigationService:INavigationService
     {
         private readonly Dictionary<string, Type> _pagesByKey = new Dictionary<string, Type>();
         private NavigationPage _navigation;

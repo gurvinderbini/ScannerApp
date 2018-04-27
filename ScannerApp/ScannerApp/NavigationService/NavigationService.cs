@@ -129,7 +129,7 @@ namespace ScannerApp.NavigationService
 
         public void Initialize(NavigationPage navigation)
         {
-            navigation.BarBackgroundColor = Color.FromHex("#D7D6D7");
+            navigation.BarBackgroundColor = Color.DodgerBlue;
             navigation.BarTextColor = Color.White;
 
             _navigation = navigation;

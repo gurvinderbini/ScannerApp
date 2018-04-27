@@ -3,10 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScannerApp.Views.ScannerPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
+        <StackLayout Margin="20">
+            <Label Text="Welcome to Scanner App"
+                VerticalOptions="StartAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button  Text="Click here to Scan App" VerticalOptions="Center" 
+                     HorizontalOptions="CenterAndExpand" Command="{Binding ScanCommand}"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -12,8 +12,9 @@ namespace ScannerApp.NavigationService
     {
         public const string LoginPage = "LoginPage";
         public const string ScannerPage = "ScannerPage";
+        public const string HomePage = "HomePage";
 
-        
+
 
         public ViewModelLocator()
         {

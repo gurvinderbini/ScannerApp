@@ -3,10 +3,21 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScannerApp.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height=".35*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Image Grid.Row="0" Source="icon.png" HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"/>
+            <StackLayout Grid.Row="1" VerticalOptions="CenterAndExpand"
+                         HorizontalOptions="FillAndExpand" Margin="20">
+                <Entry Text="{Binding Name}" Placeholder="Username"/>
+
+                <Entry Text="{Binding Paassword}" Placeholder="Password"/>
+
+                <Button Text="Login" Command="{Binding LoginCommand}"/>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

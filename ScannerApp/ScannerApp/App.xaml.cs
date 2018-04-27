@@ -21,9 +21,10 @@ namespace ScannerApp
 			InitializeComponent();
 		    var navigationService = new NavigationService.NavigationService();
 		    navigationService.Configure(ViewModelLocator.LoginPage, typeof(LoginPage));
+		    navigationService.Configure(ViewModelLocator.ScannerPage, typeof(ScannerPage));
 
 
-		    if (!SimpleIoc.Default.IsRegistered<INavigationService>())
+            if (!SimpleIoc.Default.IsRegistered<INavigationService>())
 		        SimpleIoc.Default.Register<INavigationService>(() => navigationService);
 
 		    var firstPage = new NavigationPage(new LoginPage());

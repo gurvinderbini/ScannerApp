@@ -3,22 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ScannerApp.Views.LoginPage">
     <ContentPage.Content>
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height=".5*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Image Grid.Row="0" Source="icon.png" HorizontalOptions="CenterAndExpand"
-                   VerticalOptions="CenterAndExpand" Aspect="AspectFill"/>
-            <StackLayout Grid.Row="1" VerticalOptions="StartAndExpand"
-                         HorizontalOptions="FillAndExpand" Margin="20">
-                <!--<Entry Text="{Binding Name}" Placeholder="Username"/>-->
+        <StackLayout Margin="20">
 
-                <Entry Text="{Binding Password}" IsPassword="True" Placeholder="Password"/>
+            <Image Source="logo.png" HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="Start" Aspect="AspectFit" Margin="0,50" HeightRequest="200"/>
+            <Entry Text="{Binding Password}" IsPassword="True" Placeholder="Enter the pin"
+                   PlaceholderColor="Gray" />
 
-                <Button Text="Login" Command="{Binding LoginCommand}" BackgroundColor="DodgerBlue"
-                        TextColor="White" Margin="0,10"/>
-            </StackLayout>
-        </Grid>
+            <Button Text="Login" Command="{Binding LoginCommand}" BackgroundColor="DodgerBlue"
+                    TextColor="White" Margin="0,15" CornerRadius="20"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

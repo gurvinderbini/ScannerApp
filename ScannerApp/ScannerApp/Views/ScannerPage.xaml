@@ -5,12 +5,13 @@
              Title="Scanner">
     <ContentPage.Content>
         <StackLayout Margin="20">
-            <Label Text="Welcome to Scanner App"
+            <Label Text="{Binding Message}"
                 VerticalOptions="Start" FontSize="20" FontAttributes="Bold" TextColor="DodgerBlue"
                 HorizontalOptions="CenterAndExpand" />
             <Button  Text="Click here to Scan App" VerticalOptions="CenterAndExpand" BackgroundColor="DodgerBlue"
                      TextColor="White"
                      HorizontalOptions="CenterAndExpand" Command="{Binding ScanCommand}"></Button>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

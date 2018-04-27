@@ -1,5 +1,5 @@
 ﻿using System;
-
+using Acr.UserDialogs;
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
@@ -24,6 +24,7 @@ namespace ScannerApp.Droid
 
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
             MobileBarcodeScanner.Initialize(Application);
+            UserDialogs.Init(this);
             LoadApplication(new App());
         }
 

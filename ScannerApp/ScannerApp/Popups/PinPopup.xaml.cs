@@ -35,6 +35,11 @@ namespace ScannerApp.Popups
             private readonly PinViewModel _pinViewModel;
 
             public PinViewModel PinViewModel => _pinViewModel;
+            private List<string> correctPinsList=new List<string>()
+            {
+                "1234","9999"
+            };
+
 
             public PinAuthViewModel()
             {
@@ -43,8 +48,11 @@ namespace ScannerApp.Popups
                 _pinViewModel = new PinViewModel
                 {
                     TargetPinLength = 4,
-                    ValidatorFunc = (arg) => Enumerable.SequenceEqual(arg, _correctPin)
+                   
                 };
+                
+                _pinViewModel.ValidatorFunc = (arg) => arg.SequenceEqual(_correctPin);
+
                 _pinViewModel.Success += (object sender, EventArgs e) =>
                 {
                     Debug.WriteLine("Success. Assume page will be closed automatically.");

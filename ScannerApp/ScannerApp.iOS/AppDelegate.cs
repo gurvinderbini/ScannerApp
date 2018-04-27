@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FormsPinView.iOS;
 using Foundation;
 using UIKit;
 
@@ -25,6 +25,7 @@ namespace ScannerApp.iOS
             global::Xamarin.Forms.Forms.Init();
 
             ZXing.Net.Mobile.Forms.iOS.Platform.Init();
+            PinItemViewRenderer.Init();
 
             LoadApplication(new App());
 

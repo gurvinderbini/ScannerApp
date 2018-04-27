@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pcl="clr-namespace:FormsPinView.PCL;assembly=FormsPinView.PCL"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="ScannerApp.Popups.PinPopup">
+    <StackLayout VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="20, 20, 20, 20">
+
+        <Frame HorizontalOptions="CenterAndExpand"  Padding="0, 10, 0, 0" CornerRadius="20">
+            <pcl:PinView x:Name="MyPinView" Title="Enter Security Pin"
+                         BindingContext="{Binding PinViewModel}" BackgroundColor="White"
+                         HorizontalOptions="FillAndExpand"></pcl:PinView>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

@@ -14,5 +14,17 @@ namespace ScannerApp.ViewModels
         {
             NavigationService = navigationService;
         }
+
+        private bool _layoutVisibility;
+
+        public bool LayoutVisibility
+        {
+            get => _layoutVisibility;
+            set
+            {
+                _layoutVisibility = value;
+                RaisePropertyChanged();
+            }
+        }
     }
 }

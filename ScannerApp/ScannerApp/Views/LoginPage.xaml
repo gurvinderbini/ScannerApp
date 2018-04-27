@@ -7,8 +7,8 @@
 
             <Image Source="logo.png" HorizontalOptions="CenterAndExpand"
                    VerticalOptions="Start" Aspect="AspectFit" Margin="0,50" HeightRequest="200"/>
-            <Entry Text="{Binding Password}" IsPassword="True" Placeholder="Enter the pin"
-                   PlaceholderColor="Gray" />
+            <!--<Entry Text="{Binding Password}" IsPassword="True" Placeholder="Enter the pin"
+                   PlaceholderColor="Gray" />-->
 
             <Button Text="Login" Command="{Binding LoginCommand}" BackgroundColor="DodgerBlue"
                     TextColor="White" Margin="0,15" CornerRadius="20"/>

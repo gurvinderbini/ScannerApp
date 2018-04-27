@@ -4,7 +4,7 @@
              x:Class="ScannerApp.Views.ScannerPage"
              Title="Scanner">
     <ContentPage.Content>
-        <StackLayout Margin="20">
+        <StackLayout Margin="20" IsVisible="{Binding LayoutVisibility}">
             <Label Text="{Binding Message}"
                 VerticalOptions="Start" FontSize="20" FontAttributes="Bold" TextColor="DodgerBlue"
                 HorizontalOptions="CenterAndExpand" />

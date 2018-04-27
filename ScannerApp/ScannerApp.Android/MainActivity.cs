@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using FormsPinView.Droid;
 using ZXing.Mobile;
 
 namespace ScannerApp.Droid
@@ -24,6 +25,8 @@ namespace ScannerApp.Droid
 
             ZXing.Net.Mobile.Forms.Android.Platform.Init();
             MobileBarcodeScanner.Initialize(Application);
+            PinItemViewRenderer.Init();
+
             UserDialogs.Init(this);
             LoadApplication(new App());
         }

@@ -8,6 +8,7 @@ using FormsPinView.PCL;
 using GalaSoft.MvvmLight;
 using Rg.Plugins.Popup.Pages;
 using Rg.Plugins.Popup.Services;
+using ScannerApp.Backend.Apis;
 using ScannerApp.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -23,11 +24,14 @@ namespace ScannerApp.Popups
 		    var viewModel = new PinAuthViewModel();
 		    viewModel.PinViewModel.Success += (object sender, EventArgs e) =>
 		    {
-		        scannerPageViewModel.LayoutVisibility = true;
-		        PopupNavigation.PopAsync();
+		     //   scannerPageViewModel.LayoutVisibility = true;
+		       // PopupNavigation.PopAsync();
 		    };
+        
 		    base.BindingContext = viewModel;
         }
+
+       
 
         public class PinAuthViewModel : ViewModelBase
         {
@@ -35,23 +39,35 @@ namespace ScannerApp.Popups
             private readonly PinViewModel _pinViewModel;
 
             public PinViewModel PinViewModel => _pinViewModel;
-            private List<string> correctPinsList=new List<string>()
+
+            private IList<char> _enterdPin;
+
+            public IList<char> EnterdPin
             {
-                "1234","9999"
-            };
+                get => _enterdPin;
+                set
+                {
+                    _enterdPin = value;
+                    if (_enterdPin.Count == 4)
+                    {
+
+                    }
+                }
+            }
 
 
             public PinAuthViewModel()
             {
+               
 
-                _correctPin = new[] { '1', '2', '3', '4' };
+                  _correctPin = new[] { '1', '2', '3', '4' };
                 _pinViewModel = new PinViewModel
                 {
                     TargetPinLength = 4,
-                   
+                    ValidatorFunc = (arg) => arg.SequenceEqual(_correctPin),
                 };
-                
-                _pinViewModel.ValidatorFunc = (arg) => arg.SequenceEqual(_correctPin);
+
+
 
                 _pinViewModel.Success += (object sender, EventArgs e) =>
                 {

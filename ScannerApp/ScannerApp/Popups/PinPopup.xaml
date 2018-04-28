@@ -9,7 +9,7 @@
         <Frame HorizontalOptions="CenterAndExpand"  Padding="0, 10, 0, 0" CornerRadius="20">
             <pcl:PinView x:Name="MyPinView" Title="Enter Security Pin"
                          BindingContext="{Binding PinViewModel}" BackgroundColor="White"
-                         HorizontalOptions="FillAndExpand"></pcl:PinView>
+                         HorizontalOptions="FillAndExpand" ></pcl:PinView>
         </Frame>
     </StackLayout>
 </pages:PopupPage>

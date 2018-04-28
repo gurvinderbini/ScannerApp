@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
+using ScannerApp.Backend.Apis;
 using ScannerApp.NavigationService;
 
 namespace ScannerApp.ViewModels
@@ -40,8 +41,12 @@ namespace ScannerApp.ViewModels
 
         public RelayCommand LoginCommand=>new RelayCommand(Login);
 
-        private void Login()
+        private new async void Login()
         {
+            if (String.IsNullOrEmpty(Password)) return;
+           
+         var result=   await new Login().LoginTask("1234");
+
             NavigationService.NavigateTo(ViewModelLocator.ScannerPage);
         }
     }

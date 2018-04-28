@@ -19,5 +19,17 @@ namespace ScannerApp.Views
 		    BindingContext = _viewModel;
             NavigationPage.SetHasNavigationBar(this,false);
 		}
+
+	    private void Entry_OnTextChanged(object sender, TextChangedEventArgs e)
+	    {
+	        Entry entry = sender as Entry;
+	        String val = entry.Text; //Get Current Text
+
+	        if (val.Length > 4)//If it is more than your character restriction
+	        {
+	            val = val.Remove(val.Length - 1);// Remove Last character 
+	            entry.Text = val; //Set the Old value
+	        }
+	    }
 	}
 }

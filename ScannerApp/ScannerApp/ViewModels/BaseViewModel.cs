@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Views;
+using ScannerApp.Backend.Apis;
 
 namespace ScannerApp.ViewModels
 {
@@ -15,6 +16,7 @@ namespace ScannerApp.ViewModels
             NavigationService = navigationService;
         }
 
+        #region Properties
         private bool _layoutVisibility;
 
         public bool LayoutVisibility
@@ -26,5 +28,12 @@ namespace ScannerApp.ViewModels
                 RaisePropertyChanged();
             }
         }
+        #endregion
+
+        #region Backend
+
+        public static Login Login=>new Login();
+
+        #endregion
     }
 }

@@ -6,6 +6,7 @@ using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
 using ScannerApp.Backend.Apis;
 using ScannerApp.NavigationService;
+using ScannerApp.Utils;
 
 namespace ScannerApp.ViewModels
 {
@@ -49,6 +50,9 @@ namespace ScannerApp.ViewModels
             var result=   await LoginDa.LoginTask(Password);
             if (!String.IsNullOrEmpty(result.token))
             {
+                Settings.SessionCode = result.token;
+                Settings.EmployeeID =Convert.ToString(result.employee.id);
+                Settings.StationID = "1";
                 NavigationService.NavigateTo(ViewModelLocator.ScannerPage);
             }
             UserDialogs.Instance.HideLoading();

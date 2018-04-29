@@ -13,5 +13,7 @@ namespace ScannerApp.Backend.Apis
 
         public const string LoginApi = "api/auth/tix/login";
 
+        public const string BarcodeApi = "api/tix/validate-tix?barcode_number={0}&station_id={1}&employee_id={2}&token={3}";
+
     }
 }

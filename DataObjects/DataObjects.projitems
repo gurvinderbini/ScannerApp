@@ -9,6 +9,7 @@
     <Import_RootNamespace>DataObjects</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)BarcodeBo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BaseBo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LoginBo.cs" />
   </ItemGroup>

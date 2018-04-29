@@ -6,7 +6,7 @@ using DataObjects;
 
 namespace ScannerApp.Backend.Apis
 {
-    public class Login : ApiBase
+    public class LoginDa : ApiBase
     {
         public async Task<LoginBo> LoginTask(string pin)
         {

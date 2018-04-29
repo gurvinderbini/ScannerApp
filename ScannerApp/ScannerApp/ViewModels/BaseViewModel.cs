@@ -32,7 +32,7 @@ namespace ScannerApp.ViewModels
 
         #region Backend
 
-        public static Login Login=>new Login();
+        public static Login LoginDa=>new Login();
 
         #endregion
     }

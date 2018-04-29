@@ -5,7 +5,14 @@ using System.Text;
 
 namespace DataObjects
 {
-    public class BaseBo:ObservableObject
+    public class BaseBo : ObservableObject
     {
+        public Error error { get; set; }
     }
+    public class Error
+    {
+        public string message { get; set; }
+        public int status_code { get; set; }
+    }
+
 }

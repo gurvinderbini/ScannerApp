@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Acr.UserDialogs;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
 using ScannerApp.Backend.Apis;
@@ -44,10 +45,13 @@ namespace ScannerApp.ViewModels
         private new async void Login()
         {
             if (String.IsNullOrEmpty(Password)) return;
-           
-         var result=   await new Login().LoginTask("1234");
-
-            NavigationService.NavigateTo(ViewModelLocator.ScannerPage);
+            UserDialogs.Instance.ShowLoading();
+            var result=   await LoginDa.LoginTask(Password);
+            if (!String.IsNullOrEmpty(result.token))
+            {
+                NavigationService.NavigateTo(ViewModelLocator.ScannerPage);
+            }
+            UserDialogs.Instance.HideLoading();
         }
     }
 }

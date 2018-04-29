@@ -43,7 +43,7 @@ namespace ScannerApp.ViewModels
 
         public RelayCommand LoginCommand=>new RelayCommand(Login);
 
-        private new async void Login()
+        private  async void Login()
         {
             if (String.IsNullOrEmpty(Password)) return;
             UserDialogs.Instance.ShowLoading();
@@ -54,6 +54,10 @@ namespace ScannerApp.ViewModels
                 Settings.EmployeeID =Convert.ToString(result.employee.id);
                 Settings.StationID = "1";
                 NavigationService.NavigateTo(ViewModelLocator.ScannerPage);
+            }
+            else
+            {
+              await  UserDialogs.Instance.AlertAsync("Your pin is not valid, please try again !");
             }
             UserDialogs.Instance.HideLoading();
         }

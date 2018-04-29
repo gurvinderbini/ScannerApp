@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScannerApp.iOS", "ScannerAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScannerApp", "ScannerApp\ScannerApp\ScannerApp.csproj", "{00EAD4EB-7CFE-4B57-9A3B-37F94E0D6C9E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScannerApp.Backend", "ScannerApp.Backend\ScannerApp.Backend.csproj", "{50533BB3-1077-4E07-90C6-13B2C2F159C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ScannerApp.Backend", "ScannerApp.Backend\ScannerApp.Backend.csproj", "{50533BB3-1077-4E07-90C6-13B2C2F159C8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{C9661E0D-6828-458B-9961-BB011D5F38CF}"
 EndProject
@@ -19,12 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Targets", "Targets", "{4B21
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{8CF6C70F-8164-4E4F-926E-B870E76C2074}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "DataObjects", "DataObjects\DataObjects.shproj", "{63A3F35C-13AB-44DF-BE46-12D01940D86E}"
-EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		DataObjects\DataObjects.projitems*{63a3f35c-13ab-44df-be46-12d01940d86e}*SharedItemsImports = 13
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
@@ -153,7 +148,6 @@ Global
 		{F722EA81-FC39-4832-BFED-16696B1C40D4} = {4B21E731-CFF5-4A70-A89A-9CC8927838DB}
 		{00EAD4EB-7CFE-4B57-9A3B-37F94E0D6C9E} = {110F6095-12EA-49E8-A679-156E0D3C3E4A}
 		{50533BB3-1077-4E07-90C6-13B2C2F159C8} = {C9661E0D-6828-458B-9961-BB011D5F38CF}
-		{63A3F35C-13AB-44DF-BE46-12D01940D86E} = {8CF6C70F-8164-4E4F-926E-B870E76C2074}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F0795F1-5885-4637-8675-5A3762FF641A}

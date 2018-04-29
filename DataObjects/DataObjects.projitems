@@ -10,6 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)BarcodeBo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)BaseBo.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)LoginBo.cs" />
   </ItemGroup>

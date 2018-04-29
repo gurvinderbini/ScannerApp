@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DataObjects
+namespace Models
 {
     public class BarcodeBo : BaseBo
     {

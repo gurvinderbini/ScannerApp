@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Text;
 using Acr.UserDialogs;
+using DataObjects;
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
+using ScannerApp.Utils;
 
 namespace ScannerApp.ViewModels
 {
@@ -39,7 +41,22 @@ namespace ScannerApp.ViewModels
                 if (result != null)
                 {
                     scanner.Cancel();
-                    Message = $"Your code is  {result.Text}";
+                    UserDialogs.Instance.ShowLoading();
+                    BarcodeBo barcodeBo = await BarcodeDa.ValidateBarcode(result.Text, Settings.StationID, Settings.EmployeeID,
+                        Settings.SessionCode);
+                    if (barcodeBo?.data != null)
+                    {
+                        if (barcodeBo.data.scan.result == "validated")
+                        {
+                            Message = $"Your code is  Validated ";
+                        }
+                        else
+                        {
+                            Message = $"Your code is not validated ";
+                        }
+
+                    }
+                    UserDialogs.Instance.HideLoading();
                     // UserDialogs.Instance.Alert($" {result.Text}");
                     //   Console.WriteLine("Scanned Barcode: " + result.Text);
 
